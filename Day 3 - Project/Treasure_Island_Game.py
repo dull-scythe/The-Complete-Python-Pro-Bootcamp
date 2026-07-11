@@ -32,6 +32,7 @@ if direction == 'left' or 'Left':
         door = str(input("Please pick a door to go through: Red, Blue, or Yellow? "))
         if door == 'yellow' or 'Yellow':
             print("Congratulations! You found the hidden treasure!!!")
+            print("Excelsior!")
         elif door == 'red' or 'Red':
             print("This ain't the matrix...")
             print("AHHHH! You were burned by fire!")
