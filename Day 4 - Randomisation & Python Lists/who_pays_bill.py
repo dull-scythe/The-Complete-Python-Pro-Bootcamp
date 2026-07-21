@@ -6,12 +6,17 @@ Day 4 - Exercise 2: Create an app that picks a random name from a list of friend
 import random
 
 friends = ["John", "Susan", "Ethan", "Eden", "Dave", "Jonas"]
-print(len(friends))
 
+'''First Implementation using what I know.'''
 #len(friends)-1 ensures that the index is within range when randomly picking an int. Otherwise causes an error.
 random_name = random.randint(0, len(friends)-1)
 
 print(friends[random_name])
+
+'''Second Implementation Following Tutorial'''
+print(random.choice(friends))
+
+
 
 
 
