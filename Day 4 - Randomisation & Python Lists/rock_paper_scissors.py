@@ -6,7 +6,10 @@ print("Type 0 for Rock")
 print("Type 1 for Paper")
 print("Type 2 for Scissors")
 
-choice = int(input())
+user_choice = int(input())
+
+#Need to implement randomisation of computer's choice using control flow and random module
+computer_choice = random.randint(0, 2) 
 
 rock = """
     _______
@@ -33,30 +36,79 @@ scissors = """
 ---.__(___)
 """
 
-if choice == 0:
-    '''
-    print ascii for rock
-    '''
+# if user_choice == 0:
+#     '''
+#     print ascii for rock
+#     '''
+#     print(rock)
+
+# elif user_choice == 1:
+#     '''
+#     print ascii for paper
+#     '''
+#     print(paper)
+# elif user_choice == 2:
+#     '''
+#     print ascii for scissors
+#     '''
+#     print(scissors)
+# else:
+#     print("Wrong input. Game over!")
+
+# if computer_choice == 0:
+#     '''
+#     print ascii for rock
+#     '''
+#     print(rock)
+
+# elif computer_choice == 1:
+#     '''
+#     print ascii for paper
+#     '''
+#     print(paper)
+# else:
+#     '''
+#     print ascii for scissors
+#     '''
+#     print(scissors)
+
+'''
+Implement control flow for matches by comparing user vs computer
+'''
+
+if user_choice == 0 and computer_choice == 0:
     print(rock)
-
-elif choice == 1:
-    '''
-    print ascii for paper
-    '''
+    print(rock) 
+    print("It's a draw!")
+elif user_choice == 0 and computer_choice == 1:
+    print(rock)
     print(paper)
-elif choice == 2:
-    '''
-    print ascii for scissors
-    '''
+    print("You lost. Paper beats Rock.")
+elif user_choice == 0 and computer_choice == 2:
+    print(rock)
+    print(scissors) 
+    print("You won! Rock beats Scissors.")
+elif user_choice == 1 and computer_choice == 0:
+    print(paper)
+    print(rock) 
+    print("You won! Paper beats Rock.")
+elif user_choice == 1 and computer_choice == 1:
+    print(paper)
+    print(paper)
+    print("It's a draw!")
+elif user_choice == 1 and computer_choice == 2:
+    print(paper)
+    print(scissors) 
+    print("You lost. Scissors beats Paper.")
+elif user_choice == 2 and computer_choice == 0:
     print(scissors)
-else:
-    print("Wrong input. Game over!")
-
-
-'''
-Need to implement randomisation of computer's choice using control flow and random module
-'''
-
-computer_choice = random.randomint() 
-
-print(computer_choice)
+    print(rock) 
+    print("You lost. Rock beats Scissors.")
+elif user_choice == 2 and computer_choice == 1:
+    print(scissors)
+    print(paper)
+    print("You won! Scissors beats Paper.")
+elif user_choice == 2 and computer_choice == 2: 
+    print(scissors)
+    print(scissors)
+    print("It's a draw!")
