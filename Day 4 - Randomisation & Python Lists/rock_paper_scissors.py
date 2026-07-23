@@ -1,3 +1,6 @@
+import random
+
+
 print("Welcome to ROCK PAPER SCISSORS!")
 print("Type 0 for Rock")
 print("Type 1 for Paper")
@@ -49,3 +52,11 @@ elif choice == 2:
 else:
     print("Wrong input. Game over!")
 
+
+'''
+Need to implement randomisation of computer's choice using control flow and random module
+'''
+
+computer_choice = random.randomint() 
+
+print(computer_choice)
